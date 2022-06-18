@@ -1,0 +1,17 @@
+{
+    "name": "ayodeji/link-shortner",
+    "description": "A simple link shortner in PHP",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ayodeji\\LinkShortner\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ayodeji",
+            "email": "drealayodeji@icloud.com"
+        }
+    ],
+    "require": {}
+}
