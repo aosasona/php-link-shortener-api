@@ -23,15 +23,19 @@ switch ($currentPath) {
     case "create":
         create();
         break;
-    case str_starts_with($currentPath, "view"):
+    case substr($currentPath, 0, 4) === "view":
         $pathArray = explode("/", $currentPath);
         $resource = $pathArray[1] ?? null;
         if (!$resource) {
             view_all();
         } else {
-            $id = (int) $pathArray[1] ?? 0;
+            $id = (string) $pathArray[1] ?? 0;
             view_one($id);
         }
+        break;
+    case "":
+        http_response_code(200);
+        echo "<h1>Welcome!</h1>";
         break;
     default:
         http_response_code(200);
