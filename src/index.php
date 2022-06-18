@@ -33,10 +33,6 @@ switch ($currentPath) {
             view_one($id);
         }
         break;
-    case "":
-        http_response_code(200);
-        echo "<h1>Welcome!</h1>";
-        break;
     default:
         http_response_code(200);
         echo "<h1>Welcome!</h1>";

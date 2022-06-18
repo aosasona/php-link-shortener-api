@@ -21,6 +21,8 @@ function view_all(): void
         return;
     } else {
         $count = count($result);
+
+        // Format result properly
         $data = array_map(function ($item) {
             return [
                 "ref" => $item["custom_ref"],
@@ -29,6 +31,11 @@ function view_all(): void
                 "created_at" => $item["created_at"]
             ];
         }, $result);
+
+        // Close the database connection
+        $stmt->closeCursor();
+
+        // Send response
         $res = make_json(false, "${count} urls found", $data, 200);
         echo $res;
         return;
@@ -59,6 +66,9 @@ function view_one(string $ref): void
             $res = make_json(true, "URL not found!", null, 404);
             echo $res;
         }
+
+        // Close the database connection
+        $stmt->closeCursor();
 
         return;
     } else {

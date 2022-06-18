@@ -1,6 +1,6 @@
 # LINK SHORTENER
 
-This is a simple PHP API that allows you to shorten links.
+This is a simple PHP API (no framework) that allows you to shorten links.
 
 ## Requirements
 
@@ -54,7 +54,7 @@ By default the API will run on port 17000.
 
 ---
 
-- `GET` - `/view`: Get all links
+- `GET` - `/view` or `/`: Get all links
 
 **SAMPLE REQUEST**
 
