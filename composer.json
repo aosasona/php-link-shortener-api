@@ -1,17 +1,22 @@
 {
-    "name": "ayodeji/link-shortner",
-    "description": "A simple link shortner in PHP",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Ayodeji\\LinkShortner\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Ayodeji",
-            "email": "drealayodeji@icloud.com"
-        }
-    ],
-    "require": {}
+  "name": "ayodeji/link-shortner",
+  "description": "A simple link shortner in PHP",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Ayodeji\\LinkShortner\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Ayodeji",
+      "email": "drealayodeji@icloud.com"
+    }
+  ],
+  "scripts": {
+    "start": "php -S localhost:17000 -t src/"
+  },
+  "require": {
+    "vlucas/phpdotenv": "^5.4"
+  }
 }
