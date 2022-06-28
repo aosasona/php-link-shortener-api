@@ -23,7 +23,7 @@ switch ($currentPath) {
     case "create":
         create();
         break;
-    case substr($currentPath, 0, 4) === "view":
+    case str_starts_with($currentPath, "view"):
         $pathArray = explode("/", $currentPath);
         $resource = $pathArray[1] ?? null;
         if (!$resource) {

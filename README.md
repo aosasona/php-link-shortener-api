@@ -21,7 +21,7 @@ Then you need to create a .env file like the one in the sample
 To serve this, API use the following command:
 
 ```bash
-composer run start --timeout 0
+composer start
 ```
 
 By default the API will run on port 17000.
@@ -42,7 +42,7 @@ By default the API will run on port 17000.
 
 ```json
 {
-  "error": false,
+  "ok": true,
   "message": "Short URL created successfully",
   "data": {
     "ref": "3Lkuv",
@@ -66,7 +66,7 @@ http://localhost:17000/view
 
 ```json
 {
-  "error": false,
+  "ok": true,
   "message": "5 urls found",
   "data": [
     {
@@ -105,7 +105,7 @@ http://localhost:17000/view/3Lkuv
 
 ```json
 {
-  "error": false,
+  "ok": true,
   "message": "Short URL fetched!",
   "data": {
     "custom_ref": "3Lkuv",

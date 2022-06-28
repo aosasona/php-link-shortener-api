@@ -20,7 +20,7 @@ function make_json(
     header("Content-Type: application/json");
     http_response_code($code);
     $response = [
-        "error" => $error,
+        "ok" => !$error,
         "message" => $message,
         "data" => $data
     ];
